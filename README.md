@@ -49,7 +49,7 @@ With project name and version:
 uses: sscsb/action-sbom-upload@v2.0.0
 with:
   serverhostname: 'example.com'
-  apikey: ${{ secrets.DEPENDENCYTRACK_APIKEY }}
+  apikey: ${{ secrets.SSCSB_APIKEY }}
   projectname: 'Example Project'
   projectversion: 'master'
 ```
@@ -59,6 +59,6 @@ With project uuid:
 uses: sscsb/action-sbom-upload@v2.0.0
 with:
   serverhostname: 'example.com'
-  apikey: ${{ secrets.DEPENDENCYTRACK_APIKEY }}
+  apikey: ${{ secrets.SSCSB_APIKEY }}
   project: 'dadec8ad-7053-4e8c-8044-7b6ef698e08d'
 ```
