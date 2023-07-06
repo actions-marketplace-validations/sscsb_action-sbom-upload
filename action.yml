@@ -1,0 +1,38 @@
+name: 'Upload BOM to SSCSB'
+author: Patrick Dwyer
+description: 'Uploads a CycloneDX software bill of materials to a SSCSB server'
+inputs:
+  serverhostname:
+    description: 'SSCSB hostname'
+    required: true
+  port:
+    description: 'SSCSB port'
+    required: false
+    default: 443
+  protocol:
+    description: 'SSCSB protocol'
+    required: false
+    default: 'https'
+  apikey:
+    description: 'SSCSB API key'
+    required: true
+  project:
+    description: 'Project in SSCSB'
+    required: false
+  projectname:
+    description: 'Project name in SSCSB'
+    required: false
+  projectversion:
+    description: 'Project version in SSCSB'
+    required: false
+  autocreate:
+    description: "Automatically create the project in SSCSB if it doesn't exist"
+    default: 'false'
+    required: false
+  bomfilename:
+    description: 'Path and filename of the BOM'
+    default: 'bom.xml'
+    required: false
+runs:
+  using: 'node16'
+  main: 'index.js'
